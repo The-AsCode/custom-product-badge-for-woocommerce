@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Custom Product Badge for WooCommerce
- * Plugin URI: https://github.com/The-AsCode/product-compare-woocommerce
+ * Plugin URI: https://github.com/The-AsCode/custom-product-badge-for-woocommerce
  * Description: A simple product comparison plugin for WooCommerce.
  * Version: 1.0.0
  * Author: Shop ManagerX
