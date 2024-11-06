@@ -1,0 +1,22 @@
+{
+    "name": "adnan/product-badge",
+    "authors": [
+        {
+            "name": "Osman Haider",
+            "email": "osmanhaider159@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "ProductBadge\\Backend\\": "backend/",
+            "ProductBadge\\Frontend\\": "frontend/"
+        },
+        "files": ["functions/functions.php"]
+    },
+    "description": "Product Badge Plugin",
+    "type": "wordpress-plugin",
+    "license": "GPL-3.0+",
+    "require": {
+        "php": ">=7.4"
+    }
+}
