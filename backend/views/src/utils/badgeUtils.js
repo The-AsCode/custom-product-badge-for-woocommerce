@@ -89,7 +89,7 @@ export const badgeCustomSettings = {
 export const generateImageBadgeHtml = (badge_settings) => {
   return `<img src="${
     badge_settings.type === 'default'
-      ? `${SMX.badge_image_file}${badge_settings?.image?.src}`
+      ? `${CPBW.badge_image_file}${badge_settings?.image?.src}`
       : badge_settings.uploadedUrl
   }" style="
       margin: ${badge_settings.margin}px;

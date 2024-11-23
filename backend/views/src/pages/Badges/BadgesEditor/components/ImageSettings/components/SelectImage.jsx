@@ -54,7 +54,7 @@ const SelectImage = () => {
               >
                 <img
                   className='wmx-h-16 wmx-w-auto wmx-min-w-16'
-                  src={`${SMX.badge_image_file}${badge.src}`}
+                  src={`${CPBW.badge_image_file}${badge.src}`}
                   alt='Badge Icon'
                 />
               </button>

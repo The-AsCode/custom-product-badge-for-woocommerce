@@ -26,10 +26,10 @@ class Enqueue {
             // Enqueue the JavaScript file.
             wp_enqueue_script('cpbw-dashboard', CPBW_ASSETS . '/build/plugin-admin.js', ['wp-element'], '1.0.0' , true);
             wp_localize_script('cpbw-dashboard',
-                'SMX',
+                'CPBW',
                 array(
                     'rest_nonce'  => wp_create_nonce( 'wp_rest' ),
-                    'rest_url' => rest_url('smx/v1'),
+                    'rest_url' => rest_url('cpbw/v1'),
                     'badge_image_file' => CPBW_URL . '/backend/views/assets/badge/badgeImageData.json',
                     'badge_image_file' => CPBW_URL,
                     'is_pro' => is_plugin_active( 'cpbw-for-woocommerce-pro/cpbw-for-woocommerce-pro.php' ) ? true : false,
