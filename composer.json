@@ -1,5 +1,8 @@
 {
-    "name": "adnan/product-badge",
+    "name": "badge/manager",
+    "description": "A plugin for manage WooCommerce custom badge",
+    "type": "wordpress-plugin",
+    "license": "GPLv2 or later",
     "authors": [
         {
             "name": "Osman Haider",
@@ -7,16 +10,14 @@
         }
     ],
     "autoload": {
-        "psr-4": {
-            "ProductBadge\\Backend\\": "backend/",
-            "ProductBadge\\Frontend\\": "frontend/"
-        },
-        "files": ["functions/functions.php"]
-    },
-    "description": "Product Badge Plugin",
-    "type": "wordpress-plugin",
-    "license": "GPL-3.0+",
-    "require": {
-        "php": ">=7.4"
-    }
+		"psr-4": {
+			"CPBW\\Backend\\": "backend/",
+			"CPBW\\Frontend\\": "frontend/",
+			"CPBW\\Rest\\": "rest/",
+            "CPBW\\App\\": "app/"
+		},
+		"files": ["functions/functions.php"]
+	},
+    "minimum-stability": "dev",
+    "require": {}
 }
