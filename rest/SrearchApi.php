@@ -55,7 +55,7 @@ class SrearchApi extends WP_REST_Controller {
 		$results = Search::$search_function( $search );
 
 		if ( empty( $results ) ) {
-			return new \WP_Error( 'rest_search_invalid_search_term', __( 'Sorry, No items found with the search term.', 'store-manager-for-woocommerce' ), array( 'status' => 404 ) );
+			return new \WP_Error( 'rest_search_invalid_search_term', __( 'Sorry, No items found with the search term.', 'custom-product-badge-for-woocommerce' ), array( 'status' => 404 ) );
 		}
 
 		foreach ( $results as $result ) {
@@ -159,13 +159,13 @@ class SrearchApi extends WP_REST_Controller {
 			'type'       => 'object',
 			'properties' => array(
 				'id'    => array(
-					'description' => __( 'Unique identifier for the object.', 'store-manager-for-woocommerce' ),
+					'description' => __( 'Unique identifier for the object.', 'custom-product-badge-for-woocommerce' ),
 					'type'        => 'integer',
 					'context'     => array( 'view' ),
 					'readonly'    => true,
 				),
 				'name'  => array(
-					'description' => __( 'Name of the object.', 'store-manager-for-woocommerce' ),
+					'description' => __( 'Name of the object.', 'custom-product-badge-for-woocommerce' ),
 					'type'        => 'string',
 					'context'     => array( 'view' ),
 					'readonly'    => true,
@@ -174,7 +174,7 @@ class SrearchApi extends WP_REST_Controller {
 					),
 				),
 				'sku'   => array(
-					'description' => __( 'SKU of the object.', 'store-manager-for-woocommerce' ),
+					'description' => __( 'SKU of the object.', 'custom-product-badge-for-woocommerce' ),
 					'type'        => 'string',
 					'context'     => array( 'view' ),
 					'readonly'    => true,
@@ -183,7 +183,7 @@ class SrearchApi extends WP_REST_Controller {
 					),
 				),
 				'image' => array(
-					'description' => __( 'Image url of the object.', 'store-manager-for-woocommerce' ),
+					'description' => __( 'Image url of the object.', 'custom-product-badge-for-woocommerce' ),
 					'type'        => 'string',
 					'context'     => array( 'view' ),
 					'readonly'    => true,

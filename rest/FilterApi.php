@@ -58,7 +58,7 @@ class FilterApi extends WP_REST_Controller {
 			array(
 				'args'   => array(
 					'id' => array(
-						'description' => __( 'Unique identifier for the object.', 'store-manager-for-woocommerce' ),
+						'description' => __( 'Unique identifier for the object.', 'custom-product-badge-for-woocommerce' ),
 						'type'        => 'integer',
 					),
 				),
@@ -98,7 +98,7 @@ class FilterApi extends WP_REST_Controller {
 		if ( empty( $config ) ) {
 			return new \WP_Error(
 				'rest_not_added',
-				__( 'Sorry, the filter could not be created with empty value.', 'store-manager-for-woocommerce' ),
+				__( 'Sorry, the filter could not be created with empty value.', 'custom-product-badge-for-woocommerce' ),
 				array( 'status' => 400 )
 			);
 		}
@@ -136,7 +136,7 @@ class FilterApi extends WP_REST_Controller {
 		if ( empty( $filters ) ) {
 			return new \WP_Error(
 				'rest_filter_not_available',
-				__( 'No filter available. Create a filter first', 'store-manager-for-woocommerce' ),
+				__( 'No filter available. Create a filter first', 'custom-product-badge-for-woocommerce' ),
 				array( 'status' => 404 )
 			);
 		}
@@ -178,7 +178,7 @@ class FilterApi extends WP_REST_Controller {
 		if ( ! $updated ) {
 			return new \WP_Error(
 				'rest_not_updated',
-				__( 'Sorry, the filter could not be updated.', 'store-manager-for-woocommerce' ),
+				__( 'Sorry, the filter could not be updated.', 'custom-product-badge-for-woocommerce' ),
 				array( 'status' => 400 )
 			);
 		}
@@ -229,7 +229,7 @@ class FilterApi extends WP_REST_Controller {
 		if ( ! $deleted ) {
 			return new \WP_Error(
 				'rest_not_deleted',
-				__( 'Sorry, the filter could not be deleted.', 'store-manager-for-woocommerce' ),
+				__( 'Sorry, the filter could not be deleted.', 'custom-product-badge-for-woocommerce' ),
 				array( 'status' => 400 )
 			);
 		}
@@ -255,7 +255,7 @@ class FilterApi extends WP_REST_Controller {
 		if ( ! $permission ) {
 			return new \WP_Error(
 				'rest_not_found',
-				__( 'Sorry, Permission Denied.', 'store-manager-for-woocommerce' ),
+				__( 'Sorry, Permission Denied.', 'custom-product-badge-for-woocommerce' ),
 				array( 'status' => 400 )
 			);
 		}

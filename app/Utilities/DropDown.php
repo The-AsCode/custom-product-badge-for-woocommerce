@@ -21,8 +21,8 @@ class DropDown {// phpcs:ignore
 	public static function products()
 	{
 		return array(
-			'all_products' => esc_html__('All Products', 'store-manager-for-woocommerce'),
-			'products' => esc_html__('Few Products', 'store-manager-for-woocommerce'),
+			'all_products' => esc_html__('All Products', 'custom-product-badge-for-woocommerce'),
+			'products' => esc_html__('Few Products', 'custom-product-badge-for-woocommerce'),
 		);
 	}
 
@@ -214,7 +214,7 @@ class DropDown {// phpcs:ignore
 		$filter_attributes = array();
 
 		$primary_attributes = array(
-			'optionGroup' => __('Product', 'store-manager-for-woocommerce'),
+			'optionGroup' => __('Product', 'custom-product-badge-for-woocommerce'),
 			'options' => array(
 				'id' => self::prepare_filters('ID', '', 'number'),
 				'sku' => self::prepare_filters('SKU'),
@@ -273,10 +273,10 @@ class DropDown {// phpcs:ignore
 						'option_type' => 'manual',
 						'multiple' => false,
 						'options' => array(
-							'kg' => esc_html__('kg', 'store-manager-for-woocommerce'),
-							'g' => esc_html__('g', 'store-manager-for-woocommerce'),
-							'lb' => esc_html__('lb', 'store-manager-for-woocommerce'),
-							'oz' => esc_html__('oz', 'store-manager-for-woocommerce'),
+							'kg' => esc_html__('kg', 'custom-product-badge-for-woocommerce'),
+							'g' => esc_html__('g', 'custom-product-badge-for-woocommerce'),
+							'lb' => esc_html__('lb', 'custom-product-badge-for-woocommerce'),
+							'oz' => esc_html__('oz', 'custom-product-badge-for-woocommerce'),
 						),
 					)
 				),
@@ -336,10 +336,10 @@ class DropDown {// phpcs:ignore
 						'option_type' => 'manual',
 						'multiple' => false,
 						'options' => array(
-							'publish' => esc_html__('Publish', 'store-manager-for-woocommerce'),
-							'draft' => esc_html__('Draft', 'store-manager-for-woocommerce'),
-							'pending' => esc_html__('Pending', 'store-manager-for-woocommerce'),
-							'private' => esc_html__('Private', 'store-manager-for-woocommerce'),
+							'publish' => esc_html__('Publish', 'custom-product-badge-for-woocommerce'),
+							'draft' => esc_html__('Draft', 'custom-product-badge-for-woocommerce'),
+							'pending' => esc_html__('Pending', 'custom-product-badge-for-woocommerce'),
+							'private' => esc_html__('Private', 'custom-product-badge-for-woocommerce'),
 						),
 					)
 				),
@@ -351,8 +351,8 @@ class DropDown {// phpcs:ignore
 						'option_type' => 'manual',
 						'multiple' => false,
 						'options' => array(
-							'yes' => esc_html__('Yes', 'store-manager-for-woocommerce'),
-							'no' => esc_html__('No', 'store-manager-for-woocommerce'),
+							'yes' => esc_html__('Yes', 'custom-product-badge-for-woocommerce'),
+							'no' => esc_html__('No', 'custom-product-badge-for-woocommerce'),
 						),
 					)
 				),
@@ -361,7 +361,7 @@ class DropDown {// phpcs:ignore
 		$filter_attributes[] = $primary_attributes;
 
 		$price_attributes = array(
-			'optionGroup' => esc_html__('Price', 'store-manager-for-woocommerce'),
+			'optionGroup' => esc_html__('Price', 'custom-product-badge-for-woocommerce'),
 			'options' => array(
 				'currency' => self::prepare_filters('Currency'),
 				'regular_price' => self::prepare_filters('Regular Price', 'number', 'number'),
@@ -410,7 +410,7 @@ class DropDown {// phpcs:ignore
 
 		// Tax and Shipping Attributes
 		$tax_shipping = array(
-			'optionGroup' => esc_html__('Tax and Shipping', 'store-manager-for-woocommerce'),
+			'optionGroup' => esc_html__('Tax and Shipping', 'custom-product-badge-for-woocommerce'),
 			'options' => array(
 				'tax_class' => self::prepare_filters('Tax Class'),
 				'tax_status' => self::prepare_filters('Tax Status'),
@@ -427,7 +427,7 @@ class DropDown {// phpcs:ignore
 		 */
 		if (class_exists('WC_Subscriptions')) {
 			$subscription_attributes = array(
-				'optionGroup' => esc_html__('Subscription & Installment', 'store-manager-for-woocommerce'),
+				'optionGroup' => esc_html__('Subscription & Installment', 'custom-product-badge-for-woocommerce'),
 				'options' => array(
 					'subscription_period' => self::prepare_filters('Subscription Period'),
 					'subscription_period_interval' => self::prepare_filters('Subscription Period Length'),
@@ -447,7 +447,7 @@ class DropDown {// phpcs:ignore
 		 */
 		if (class_exists('WooCommerce_Germanized')) {
 			$wc_unit_price_attributes = array(
-				'optionGroup' => esc_html__('Unit Price (WooCommerce Germanized)', 'store-manager-for-woocommerce'),
+				'optionGroup' => esc_html__('Unit Price (WooCommerce Germanized)', 'custom-product-badge-for-woocommerce'),
 				'options' => array(
 					'wc_germanized_unit_price_measure' => self::prepare_filters('Unit Price Measure'),
 					'wc_germanized_unit_price_base_measure' => self::prepare_filters('Unit Price Base Measure'),
@@ -493,7 +493,7 @@ class DropDown {// phpcs:ignore
 		}
 
 		return array(
-			'optionGroup' => esc_html__('Product Attributes', 'store-manager-for-woocommerce'),
+			'optionGroup' => esc_html__('Product Attributes', 'custom-product-badge-for-woocommerce'),
 			'options' => $taxonomies,
 		);
 	}
@@ -515,7 +515,7 @@ class DropDown {// phpcs:ignore
 		}
 
 		return array(
-			'optionGroup' => esc_html__('Product Custom Attributes', 'store-manager-for-woocommerce'),
+			'optionGroup' => esc_html__('Product Custom Attributes', 'custom-product-badge-for-woocommerce'),
 			'options' => $attributes,
 		);
 	}
@@ -638,7 +638,7 @@ class DropDown {// phpcs:ignore
 		}
 
 		return array(
-			'optionGroup' => esc_html__('Product Taxonomies', 'store-manager-for-woocommerce'),
+			'optionGroup' => esc_html__('Product Taxonomies', 'custom-product-badge-for-woocommerce'),
 			'options' => $info,
 		);
 	}
@@ -681,7 +681,7 @@ class DropDown {// phpcs:ignore
 		}
 
 		return array(
-			'optionGroup' => esc_html__('Advance Custom Fields (ACF)', 'store-manager-for-woocommerce'),
+			'optionGroup' => esc_html__('Advance Custom Fields (ACF)', 'custom-product-badge-for-woocommerce'),
 			'options' => $options,
 		);
 	}
@@ -823,7 +823,7 @@ class DropDown {// phpcs:ignore
 		}
 
 		return array(
-			'optionGroup' => esc_html__('Custom Fields & Post Metas', 'store-manager-for-woocommerce'),
+			'optionGroup' => esc_html__('Custom Fields & Post Metas', 'custom-product-badge-for-woocommerce'),
 			'options' => $info,
 		);
 	}

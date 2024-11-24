@@ -38,7 +38,7 @@ const router = createHashRouter([
 
   {
     path: '*',
-    element: <div> {__('Page Not Found', 'store-manager-for-woocommerce')}</div>,
+    element: <div> {__('Page Not Found', 'custom-product-badge-for-woocommerce')}</div>,
   },
 ]);
 

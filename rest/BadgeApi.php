@@ -60,7 +60,7 @@ class BadgeApi extends WP_REST_Controller {
 			array(
 				'args'   => array(
 					'id' => array(
-						'description' => __( 'Unique identifier for the object.', 'store-manager-for-woocommerce' ),
+						'description' => __( 'Unique identifier for the object.', 'custom-product-badge-for-woocommerce' ),
 						'type'        => 'integer',
 					),
 				),
@@ -209,7 +209,7 @@ class BadgeApi extends WP_REST_Controller {
 		if ( ! $permission ) {
 			return new \WP_Error(
 				'rest_not_found',
-				__( 'Sorry, Permission Denied.', 'store-manager-for-woocommerce' ),
+				__( 'Sorry, Permission Denied.', 'custom-product-badge-for-woocommerce' ),
 				array( 'status' => 400 )
 			);
 		}
@@ -236,55 +236,55 @@ class BadgeApi extends WP_REST_Controller {
     public function get_collection_params() {
         return array(
             'badge_name' => array(
-                'description'       => __( 'Badge name', 'store-manager-for-woocommerce' ),
+                'description'       => __( 'Badge name', 'custom-product-badge-for-woocommerce' ),
                 'type'              => 'string',
                 'sanitize_callback' => 'sanitize_text_field',
                 'validate_callback' => 'rest_validate_request_arg',
             ),
             'badge_type' => array(
-                'description'       => __( 'Badge type', 'store-manager-for-woocommerce' ),
+                'description'       => __( 'Badge type', 'custom-product-badge-for-woocommerce' ),
                 'type'              => 'string',
                 'sanitize_callback' => 'sanitize_text_field',
                 'validate_callback' => 'rest_validate_request_arg',
             ),
             'filter' => array(
-                'description'       => __( 'Filter data', 'store-manager-for-woocommerce' ),
+                'description'       => __( 'Filter data', 'custom-product-badge-for-woocommerce' ),
                 'type'              => array( 'array', 'string', 'integer' ),
                 'sanitize_callback' => [$this, 'custom_sanitize_filter_data'],
                 'validate_callback' => 'rest_validate_request_arg',
             ),
             'badge_style' => array(
-                'description'       => __( 'Badge Style data', 'store-manager-for-woocommerce' ),
+                'description'       => __( 'Badge Style data', 'custom-product-badge-for-woocommerce' ),
                 'type'              => 'string',
                 'validate_callback' => 'rest_validate_request_arg',
             ),
             'badge_settings' => array(
-                'description'       => __( 'Badge settings', 'store-manager-for-woocommerce' ),
+                'description'       => __( 'Badge settings', 'custom-product-badge-for-woocommerce' ),
                 'type'              => 'obejct',
                 'serialize_callback' => 'maybe_serialize',
                 'validate_callback' => 'rest_validate_request_arg',
             ),
             'priority' => array(
-                'description'       => __( 'Badge priority', 'store-manager-for-woocommerce' ),
+                'description'       => __( 'Badge priority', 'custom-product-badge-for-woocommerce' ),
                 'type'              => 'integer',
                 'sanitize_callback' => 'absint',
                 'validate_callback' => 'rest_validate_request_arg',
             ),
             'status' => array(
-                'description'       => __( 'Badge status', 'store-manager-for-woocommerce' ),
+                'description'       => __( 'Badge status', 'custom-product-badge-for-woocommerce' ),
                 'type'              => 'integer',
                 'sanitize_callback' => 'absint',
                 'validate_callback' => 'rest_validate_request_arg',
             ),
             'valid_from' => array(
-                'description'       => __( 'Badge valid from date', 'store-manager-for-woocommerce' ),
+                'description'       => __( 'Badge valid from date', 'custom-product-badge-for-woocommerce' ),
                 'type'              => 'string',
                 'format'            => 'date',
                 'sanitize_callback' => 'sanitize_text_field',
                 'validate_callback' => 'rest_validate_request_arg',
             ),
             'valid_to' => array(
-                'description'       => __( 'Badge valid to date', 'store-manager-for-woocommerce' ),
+                'description'       => __( 'Badge valid to date', 'custom-product-badge-for-woocommerce' ),
                 'type'              => 'string',
                 'format'            => 'date',
                 'sanitize_callback' => 'sanitize_text_field',
@@ -326,79 +326,79 @@ class BadgeApi extends WP_REST_Controller {
             'type'       => 'object',
             'properties' => array(
                 'id'   => array(
-                    'description' => __( 'Unique identifier for the object.', 'store-manager-for-woocommerce' ),
+                    'description' => __( 'Unique identifier for the object.', 'custom-product-badge-for-woocommerce' ),
                     'type'        => 'integer',
                     'context'     => array( 'view' ),
                     'readonly'    => true,
                 ),
                 'name' => array(
-                    'description' => __( 'Badge name.', 'store-manager-for-woocommerce' ),
+                    'description' => __( 'Badge name.', 'custom-product-badge-for-woocommerce' ),
                     'type'        => 'string',
                     'context'     => array( 'view' ),
                     'readonly'    => true,
                 ),
                 'badge_type' => array(
-                    'description' => __( 'Badge type.', 'store-manager-for-woocommerce' ),
+                    'description' => __( 'Badge type.', 'custom-product-badge-for-woocommerce' ),
                     'type'        => 'string',
                     'context'     => array( 'view' ),
                     'readonly'    => true,
                 ),
                 'badge_style' => array(
-                    'description' => __( 'Badge Style.', 'store-manager-for-woocommerce' ),
+                    'description' => __( 'Badge Style.', 'custom-product-badge-for-woocommerce' ),
                     'type'        => 'string',
                     'context'     => array( 'view' ),
                     'readonly'    => true,
                 ),
                 'badge_settings' => array(
-                    'description' => __( 'Badge settings.', 'store-manager-for-woocommerce' ),
+                    'description' => __( 'Badge settings.', 'custom-product-badge-for-woocommerce' ),
                     'type'        => 'object',
                     'context'     => array( 'view' ),
                     'readonly'    => true,
                 ),
                 'priority' => array(
-                    'description' => __( 'Badge priority.', 'store-manager-for-woocommerce' ),
+                    'description' => __( 'Badge priority.', 'custom-product-badge-for-woocommerce' ),
                     'type'        => 'integer',
                     'context'     => array( 'view' ),
                     'readonly'    => true,
                 ),
                 'status' => array(
-                    'description' => __( 'Badge status.', 'store-manager-for-woocommerce' ),
+                    'description' => __( 'Badge status.', 'custom-product-badge-for-woocommerce' ),
                     'type'        => 'integer',
                     'context'     => array( 'view' ),
                     'readonly'    => true,
                 ),
                 'filter' => array(
-                    'description' => __( 'Filter.', 'store-manager-for-woocommerce' ),
+                    'description' => __( 'Filter.', 'custom-product-badge-for-woocommerce' ),
                     'type'        => 'array',
                     'context'     => array( 'view' ),
                     'readonly'    => true,
                 ),
                 'valid_from' => array(
-                    'description' => __( 'Badge valid from.', 'store-manager-for-woocommerce' ),
+                    'description' => __( 'Badge valid from.', 'custom-product-badge-for-woocommerce' ),
                     'type'        => 'date',
                     'context'     => array( 'view' ),
                     'readonly'    => true,
                 ),
                 'valid_to' => array(
-                    'description' => __( 'Badge valid to.', 'store-manager-for-woocommerce' ),
+                    'description' => __( 'Badge valid to.', 'custom-product-badge-for-woocommerce' ),
                     'type'        => 'date',
                     'context'     => array( 'view' ),
                     'readonly'    => true,
                 ),
                 'created_by' => array(
-                    'description' => __( 'Badge created by.', 'store-manager-for-woocommerce' ),
+                    'description' => __( 'Badge created by.', 'custom-product-badge-for-woocommerce' ),
                     'type'        => 'integer',
                     'context'     => array( 'view' ),
                     'readonly'    => true,
                 ),
                 'created_date' => array(
-                    'description' => __( 'Badge created date.', 'store-manager-for-woocommerce' ),
+                    'description' => __( 'Badge created date.', 'custom-product-badge-for-woocommerce' ),
                     'type'        => 'date',
                     'context'     => array( 'view' ),
                     'readonly'    => true,
                 ),
                 'updated_date' => array(
-                    'description' => __( 'Badge update date.', 'store-manager-for-woocommerce' ),
+                    'description' => __( 'Badge update date.', 'custom-product-badge-for-woocommerce' ),
                     'type'        => 'date',
                     'context'     => array( 'view' ),
                     'readonly'    => true,

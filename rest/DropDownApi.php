@@ -74,7 +74,7 @@ class DropDownApi extends WP_REST_Controller {
 			return new \WP_Error(
 				'rest_dropdown_invalid_search_term',
 				/* translators: %s: List of valid dropdown values. */
-				esc_html( sprintf( __( 'Sorry, Invalid dropdown list. Search term should be any one of these values [ %s ].', 'store-manager-for-woocommerce' ), implode( ', ', array_keys( $dropdown_methods ) ) ) ),
+				esc_html( sprintf( __( 'Sorry, Invalid dropdown list. Search term should be any one of these values [ %s ].', 'custom-product-badge-for-woocommerce' ), implode( ', ', array_keys( $dropdown_methods ) ) ) ),
 				array( 'status' => 404 )
 			);
 		}
@@ -136,13 +136,13 @@ class DropDownApi extends WP_REST_Controller {
 			'type'       => 'object',
 			'properties' => array(
 				'name'   => array(
-					'description' => __( 'Name for the object.', 'store-manager-for-woocommerce' ),
+					'description' => __( 'Name for the object.', 'custom-product-badge-for-woocommerce' ),
 					'type'        => 'string',
 					'context'     => array( 'view' ),
 					'readonly'    => true,
 				),
 				'values' => array(
-					'description' => __( 'Values of the object.', 'store-manager-for-woocommerce' ),
+					'description' => __( 'Values of the object.', 'custom-product-badge-for-woocommerce' ),
 					'type'        => 'array',
 					'context'     => array( 'view' ),
 					'readonly'    => true,

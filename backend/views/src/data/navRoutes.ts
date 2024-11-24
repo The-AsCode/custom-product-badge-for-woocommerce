@@ -7,9 +7,9 @@ type Routes = Partial<{
 }>;
 
 const navRoutes: Routes = {
-  '/': __('Badges', 'store-manager-for-woocommerce'),
-  editor: __('Badge Editor', 'store-manager-for-woocommerce'),
-  // filters: __('Filters', 'store-manager-for-woocommerce'),
+  '/': __('Badges', 'custom-product-badge-for-woocommerce'),
+  editor: __('Badge Editor', 'custom-product-badge-for-woocommerce'),
+  // filters: __('Filters', 'custom-product-badge-for-woocommerce'),
 } as const;
 
 export default navRoutes;

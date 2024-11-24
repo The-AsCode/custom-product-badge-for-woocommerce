@@ -55,7 +55,7 @@ class Filter {
         if ( ! $filter ) {
             return new \WP_Error(
                 'rest_not_added',
-                __( 'Sorry, Failed to Save filter.', 'store-manager-for-woocommerce' ),
+                __( 'Sorry, Failed to Save filter.', 'custom-product-badge-for-woocommerce' ),
                 array( 'status' => 400 )
             );
         }
@@ -83,7 +83,7 @@ class Filter {
         if ( ! $filter ) {
             return new \WP_Error(
                 'rest_not_found',
-                __( 'Sorry, Invalid filter id.', 'store-manager-for-woocommerce' ),
+                __( 'Sorry, Invalid filter id.', 'custom-product-badge-for-woocommerce' ),
                 array( 'status' => 400 )
             );
         }
@@ -98,7 +98,7 @@ class Filter {
 
         return new \WP_Error(
             'rest_not_found',
-            __( 'Sorry, Invalid filter data.', 'store-manager-for-woocommerce' ),
+            __( 'Sorry, Invalid filter data.', 'custom-product-badge-for-woocommerce' ),
             array( 'status' => 400 )
         );
     }
@@ -144,7 +144,7 @@ class Filter {
         if ( ! $update || ! $filter ) {
             return new \WP_Error(
                 'rest_not_added',
-                __( 'Sorry, the filter could not be updated.', 'store-manager-for-woocommerce' ),
+                __( 'Sorry, the filter could not be updated.', 'custom-product-badge-for-woocommerce' ),
                 array( 'status' => 400 )
             );
         }

@@ -11,10 +11,10 @@
  * Author URI:        https://shopmanagerx.wordpress.com/
  * License:           GPLv3 or later
  * License URI:       http://www.gnu.org/licenses/gpl-3.0.txt
- * Text Domain:       store-manager-for-woocommerce
+ * Text Domain:       custom-product-badge-for-woocommerce
  * Domain Path:       /languages
  * * Requires Plugins: woocommerce
- * @package     Store Manager For WooCommerce
+ * @package     Custom Product Badge For WooCommerce
  * @copyright   Copyright (C) 2023 Shop Manager X. All rights reserved.
  * @license     GPLv3 or later
  * @since       1.0.0
@@ -131,8 +131,8 @@ final class CPBW_Main {
      * @return void
      */
     public function init_plugin() {
-        $badge_base_dir = ABSPATH . 'wp-content/plugins/store-manager-for-woocommerce/backend/views/assets/badge/badge-images';
-        $badge_json_file = ABSPATH . 'wp-content/plugins/store-manager-for-woocommerce/backend/views/assets/badge/badgeImageData.json';
+        $badge_base_dir = ABSPATH . 'wp-content/plugins/custom-product-badge-for-woocommerce/backend/views/assets/badge/badge-images';
+        $badge_json_file = ABSPATH . 'wp-content/plugins/custom-product-badge-for-woocommerce/backend/views/assets/badge/badgeImageData.json';
         if (is_admin()) {
             new CPBW\Backend\Menu();
             // new CPBW\App\Image\Image( $badge_base_dir, $badge_json_file);

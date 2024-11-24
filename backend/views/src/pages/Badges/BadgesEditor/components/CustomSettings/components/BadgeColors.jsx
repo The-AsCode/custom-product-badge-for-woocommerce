@@ -60,7 +60,7 @@ const BadgeColors = () => {
 
     return (
       <div className='wmx-flex wmx-items-center wmx-gap-2'>
-        <span>{__(label, 'store-manager-for-woocommerce')}:</span>
+        <span>{__(label, 'custom-product-badge-for-woocommerce')}:</span>
         <div className='wmx-relative'>
           {renderColorPickerButton(key)}
           {isActive && (

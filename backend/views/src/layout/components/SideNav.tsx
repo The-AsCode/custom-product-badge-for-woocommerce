@@ -22,10 +22,10 @@ const SideNav = () => {
         <div className='wmx-mt-8'>
           <h3 className='wmx-flex wmx-flex-col wmx-items-center'>
             <span className='wmx-text-lg wmx-font-medium wmx-text-gray-700'>
-              {__('WooCommerce', 'store-manager-for-woocommerce')}
+              {__('WooCommerce', 'custom-product-badge-for-woocommerce')}
             </span>
             <span className='wmx-text-xl wmx-font-bold wmx-text-gray-700'>
-              {__('Store Manager', 'store-manager-for-woocommerce')}
+              {__('Store Manager', 'custom-product-badge-for-woocommerce')}
             </span>
           </h3>
         </div>

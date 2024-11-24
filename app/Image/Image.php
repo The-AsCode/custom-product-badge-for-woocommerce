@@ -67,13 +67,13 @@ class Image {
         if ( empty( $wp_filesystem ) ) {
             // Get the file system credentials
             if ( ! WP_Filesystem() ) {
-                return new \WP_Error( 'filesystem_error', __( 'Could not initialize the file system.', 'store-manager-for-woocommerce' ) );
+                return new \WP_Error( 'filesystem_error', __( 'Could not initialize the file system.', 'custom-product-badge-for-woocommerce' ) );
             }
         }
 
         // Use WP_Filesystem methods to write the file
         if ( ! $wp_filesystem->put_contents( $json_file, $json_data, FS_CHMOD_FILE ) ) {
-            return new \WP_Error( 'file_write_error', __( 'Failed to write JSON file.', 'store-manager-for-woocommerce' ) );
+            return new \WP_Error( 'file_write_error', __( 'Failed to write JSON file.', 'custom-product-badge-for-woocommerce' ) );
         }
     } 
 

@@ -254,7 +254,7 @@ This plugin is compatible with the latest versions of WordPress and WooCommerce.
 =Using The WordPress Dashboard=
 
 1. Navigate to the 'Add New' in the plugins dashboard
-2. Search for 'store-manager-for-woocommerce'
+2. Search for 'custom-product-badge-for-woocommerce'
 3. Click 'Install Now'
 4. Activate the plugin on the Plugin dashboard
 

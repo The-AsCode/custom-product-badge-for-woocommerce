@@ -26,7 +26,7 @@ class BadgeHelper {
         if ( empty($results) ) {
             return new \WP_Error(
                 'rest_no_badges',
-                __( 'No badges found.', 'store-manager-for-woocommerce' ),
+                __( 'No badges found.', 'custom-product-badge-for-woocommerce' ),
                 array( 'status' => 404 )
             );
         }
@@ -77,7 +77,7 @@ class BadgeHelper {
         if (false === $inserted) {
             return new \WP_Error(
                 'rest_not_added',
-                __('Sorry, the badge could not be added.', 'store-manager-for-woocommerce'),
+                __('Sorry, the badge could not be added.', 'custom-product-badge-for-woocommerce'),
                 array('status' => 400)
             );
         }
@@ -104,7 +104,7 @@ class BadgeHelper {
         if ( empty( $result ) ) {
             return new \WP_Error(
                 'rest_no_badge',
-                __( 'Badge not found.', 'store-manager-for-woocommerce' ),
+                __( 'Badge not found.', 'custom-product-badge-for-woocommerce' ),
                 array( 'status' => 404 )
             );
         }
@@ -146,7 +146,7 @@ class BadgeHelper {
         if (false === $updated) {
             return new \WP_Error(
                 'rest_not_updated',
-                __('Sorry, the badge could not be updated.', 'store-manager-for-woocommerce'),
+                __('Sorry, the badge could not be updated.', 'custom-product-badge-for-woocommerce'),
                 array('status' => 400)
             );
         }
@@ -172,7 +172,7 @@ class BadgeHelper {
         if ( ! is_numeric( $badge_id ) || $badge_id <= 0 ) {
             return new \WP_Error(
                 'rest_invalid_id',
-                __('Invalid badge ID.', 'store-manager-for-woocommerce'),
+                __('Invalid badge ID.', 'custom-product-badge-for-woocommerce'),
                 array('status' => 400)
             );
         }
@@ -183,7 +183,7 @@ class BadgeHelper {
         if ( empty( $previous ) ) {
             return new \WP_Error(
                 'rest_not_found',
-                __('Badge not found.', 'store-manager-for-woocommerce'),
+                __('Badge not found.', 'custom-product-badge-for-woocommerce'),
                 array('status' => 404)
             );
         }
@@ -195,7 +195,7 @@ class BadgeHelper {
         if ( false === $deleted ) {
             return new \WP_Error(
                 'rest_not_deleted',
-                __('Sorry, the badge could not be deleted.', 'store-manager-for-woocommerce'),
+                __('Sorry, the badge could not be deleted.', 'custom-product-badge-for-woocommerce'),
                 array('status' => 400)
             );
         }
