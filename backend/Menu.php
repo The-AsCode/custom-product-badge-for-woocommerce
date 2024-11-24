@@ -13,8 +13,8 @@ class Menu {
 
     public function cpbw_admin_menu() {
         add_menu_page(
-            __('Store Manager', 'cpbw-for-woocommerce'),
-            __('Store Manager', 'cpbw-for-woocommerce'),
+            __('CPBW', 'custom-product-badge-for-woocommerce'),
+            __('CPBW', 'custom-product-badge-for-woocommerce'),
             'manage_options',
             'cpbw',
             [$this, 'plugin_page'],
