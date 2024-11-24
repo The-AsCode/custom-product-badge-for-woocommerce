@@ -31,18 +31,6 @@ Class Api {
 	 */
 	public function register_rest_api() {
 
-		//wp-json/cpbw/v1/product-count
-		$products_count = new ProductsCountApi;
-		$products_count->register_route();
-
-		//wp-json/cpbw/v1/product-category
-		$product_category = new ProductCategoryApi;
-		$product_category->register_route();
-
-		//wp-json/cpbw/v1/product-type
-		$product_type = new ProductTypeApi;
-		$product_type->register_routes();
-
 		//wp-json/cpbw/v1/product?per_page=20&category=slug&type=type&page=1&search=product_name&status=all/managed/out_of_stock/low_stock
 		//wp-json/cpbw/v1/product/product_id?manage_stock=yes/no&stock_quantity=20&stock_status=instock/outofstock/onbackorder&backorders=yes/no/notify
 		$product = new ProductApi;
