@@ -8,7 +8,7 @@ import HtmlEditor from './HtmlEditor';
 const CodeEditor = () => {
   return (
     <>
-      <SectionContainer className='wmx-mt-6 wmx-mb-4' title={__('HTML Content')}>
+      <SectionContainer className='wmx-mt-6' title={__('HTML Content')}>
         <div className='wmx-grid wmx-grid-cols-2 wmx-gap-4'>
           <div className='wmx-col-span-2 2xl:wmx-col-span-1'>
             <HtmlEditor />

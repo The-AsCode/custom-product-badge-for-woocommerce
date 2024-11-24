@@ -14,7 +14,7 @@ const BadgeShape = () => {
   };
 
   return (
-    <SectionContainer className='wmx-mt-6 wmx-mb-4' title={__('Badge Shape')}>
+    <SectionContainer className='wmx-mt-6' title={__('Badge Shape')}>
       <div className='wmx-flex wmx-text-center wmx-flex-wrap  wmx-justify-center wmx-gap-4'>
         {Object.keys(clipPaths).map((key) => (
           <button

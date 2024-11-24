@@ -71,7 +71,7 @@ const BadgesEditor = () => {
 
   return (
     <div className='wmx-flex wmx-gap-4'>
-      <div className='wmx-flex-grow'>
+      <div className='wmx-flex-grow wmx-pb-4'>
         <div className='wmx-py-2.5 wmx-shadow-md wmx-px-4 wmx-border-b wmx-rounded-lg wmx-sticky wmx-z-50 wmx-top-8 wmx-bg-[#E4EAF1] wmx-border-b-gray-100 wmx-mb-6'>
           <h3 className='wmx-text-2xl wmx-font-bold'>{badgeId ? __('Edit Badge') : __('Add New Badge')}</h3>
         </div>
@@ -80,7 +80,6 @@ const BadgesEditor = () => {
           <BadgeProductFiler />
           <BadgeValidity />
           <SelectBadgeType />
-          <BadgeValidity />
           <BadgePosition />
           {renderSetting(badgeSettings.badge_type)}
         </div>

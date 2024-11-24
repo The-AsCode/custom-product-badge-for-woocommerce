@@ -44,7 +44,7 @@ export const generateBadgeHtml = (badge_settings) => {
   return `<div style='
       margin:${badge_settings.margin}px;
       color: ${badge_settings.color};
-      background-color: ${badge_settings.backgroundColor};
+      background: ${badge_settings.background};
       height: ${badge_settings.height}px;
       width: ${badge_settings.width}px;
       border-top-left-radius: ${badge_settings.borderTopLeftRadius}px;
@@ -71,7 +71,7 @@ export const badgeCustomSettings = {
   text: 'Badge Text',
   position: 'top-right',
   color: '#ffffff',
-  backgroundColor: '#000000',
+  background: '#000000',
   height: 36,
   width: 100,
   margin: 10,
