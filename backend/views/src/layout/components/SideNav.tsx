@@ -1,11 +1,20 @@
 import { __ } from '@wordpress/i18n';
-import { NavLink } from 'react-router-dom';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { NavLink, useLocation } from 'react-router-dom';
 import navRoutes from '../../data/navRoutes';
+import { resetBadgeState } from '../../features/badges/badgesSlice';
 import cn from '../../utils/cn';
 
 const SideNav = () => {
+  const location = useLocation();
+  const dispatch = useDispatch();
   type RouteType = keyof typeof navRoutes;
   const routes = Object.keys(navRoutes) as RouteType[];
+
+  useEffect(() => {
+    dispatch(resetBadgeState());
+  }, [location.pathname]);
 
   return (
     <div className='wmx-bg-white wmx-flex-shrink-0 wmx-w-48'>

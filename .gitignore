@@ -1,3 +1,5 @@
 node_modules
 assets/build
 vendor
+composer.lock
+package-lock.json
