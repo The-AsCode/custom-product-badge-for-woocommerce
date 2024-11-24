@@ -15,9 +15,6 @@ Class Api {
 
     public const NAMESPACE_NAME      = 'cpbw';
 	public const VERSION             = 'v1';
-	public const PRODUCTS_COUNT_ROUTE_NAME = 'product-count';
-	public const PRODUCT_CATEGORY_ROUTE_NAME = 'product-category';
-	public const PRODUCT_TYPE_ROUTE_NAME = 'product-type';
 	public const PRODUCT_ROUTE_NAME = 'product';
 	public const SEARCH_ROUTE_NAME = 'search';
 	public const DROPDOWN_ROUTE_NAME = 'dropdown';
