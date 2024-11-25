@@ -64,10 +64,9 @@ final class CPBW_Main {
      *
      * @return store_manager
      */
-    public static function init()
-    {
+    public static function init() {
         static $instance = false;
-
+        
         if (!$instance) {
             $instance = new self();
         }
@@ -94,8 +93,7 @@ final class CPBW_Main {
      *
      * @return void
      */
-    function activate()
-    {
+    function activate() {
         update_option('store_manager_version', CPBW_VERSION);
         // Set an option to store the installation time.
         $installed = get_option('shop_manager_install_time');

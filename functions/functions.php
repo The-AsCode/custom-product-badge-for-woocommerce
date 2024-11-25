@@ -18,6 +18,7 @@ if (!defined('ABSPATH')) {
  */
 
  use CPBW\App\Badge;
+ use CPBW\App\Utilities\Settings;
 
  if ( !function_exists( 'cpbw_apply_product_badges' ) ) {
 
@@ -34,6 +35,17 @@ if (!defined('ABSPATH')) {
         //@TODO: Check theme compitiblity, for sticky, sidebar product. 
         if( wp_doing_ajax() || is_admin() ) {
             return;
+        }
+
+        // Remove sale badge
+        if( Settings::get( 'show_wc_sale_badge' ) === 'true' ) {
+            add_filter( 'woocommerce_sale_flash', '__return_empty_string' );
+            add_filter( 'render_block_data', function( $block ) {
+                if ( $block['blockName'] === 'woocommerce/product-image' ) {
+                    $block['attrs']['showSaleBadge'] = false;
+                }
+                return $block;
+            });
         }
 
 		return ( new Badge )->apply_product_badges( $badge, $product );
@@ -82,7 +94,9 @@ if( !function_exists( 'cpbw_add_badge_to_single_product_image' ) ){
         return $badge;
     }
 
-    add_filter('woocommerce_single_product_image_thumbnail_html', 'cpbw_add_badge_to_single_product_image', PHP_INT_MAX, 2);
+    if( Settings::get( 'show_badge_in_product_page' ) === 'true' ) {
+        add_filter('woocommerce_single_product_image_thumbnail_html', 'cpbw_add_badge_to_single_product_image', PHP_INT_MAX, 2);
+    }
 }
 
 // add_action( 'woocommerce_before_shop_loop_item_title', 'add_custom_text_to_product_image' );
