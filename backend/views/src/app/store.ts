@@ -1,12 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
 import badgesReducer from '../features/badges/badgesSlice';
-import productsReducer from '../features/products/productsSlice';
 import { apiSlice } from './../features/api/apiSlice';
 
 const store = configureStore({
   reducer: {
     [apiSlice.reducerPath]: apiSlice.reducer,
-    products: productsReducer,
     badges: badgesReducer,
   },
   middleware: (getDefaultMiddleware) => {
