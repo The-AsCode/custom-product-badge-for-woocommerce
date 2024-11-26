@@ -74,6 +74,8 @@ const BadgeColors = () => {
               }}
             >
               <ColorPicker
+                height={150}
+                width={270}
                 hideControls={hideControls}
                 className='wmx-rounded-lg'
                 hidePresets
