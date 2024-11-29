@@ -1,7 +1,7 @@
 <?php
 
 /** 
- * Plugin Name:       Custom Product Badge For WooCommerce
+ * Plugin Name:       Custom Product Badge for WooCommerce
  * Plugin URI:        https://shopmanagerx.wordpress.com/
  * Description:       The Ultimate WooCommerce Plugin for Custom Badge Control.
  * Version:           1.1.4
