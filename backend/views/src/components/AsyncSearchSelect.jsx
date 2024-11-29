@@ -2,13 +2,13 @@
 import { useEffect, useRef, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { changeBadgeBaseProperties } from '../features/badges/badgesSlice';
-import { useGetProductsQuery } from '../features/products/productsApi';
+import { useGetProductsQuery } from '../features/search/searchApi';
 import cn from '../utils/cn';
 import Input from './Input';
 import LoadingSpinner from './LoadingSpinner';
 
 const AsyncSearchSelect = () => {
-  const [query, setQuery] = useState({ per_page: 10, status: 'all', search: '' });
+  const [query, setQuery] = useState({ search: '' });
   const [searchTerm, setSearchTerm] = useState('');
   const [isDropdownVisible, setDropdownVisible] = useState(false);
   const { data, isLoading, isFetching } = useGetProductsQuery(query, { skip: !query.search });
@@ -73,9 +73,9 @@ const AsyncSearchSelect = () => {
           ref={dropdownRef}
           className='wmx-absolute wmx-w-full wmx-mt-1 custom_scrollbar wmx-bg-white wmx-border wmx-border-gray-300 wmx-rounded-lg wmx-shadow-lg wmx-max-h-60 wmx-overflow-y-auto wmx-z-10'
         >
-          {data?.products?.length > 0 ? (
+          {data?.length > 0 ? (
             <ul className='wmx-divide-y wmx-divide-gray-200'>
-              {data.products.map((product) => (
+              {data.map((product) => (
                 <li
                   onClick={() => handleAddToFilter(product)}
                   key={product.id}
@@ -84,7 +84,7 @@ const AsyncSearchSelect = () => {
                     filter.some((item) => item.id === product.id) && 'wmx-bg-primary/5'
                   )}
                 >
-                  <img className='wmx-w-7 wmx-h-7 wmx-rounded' src={product.image_url} alt={product.name} />
+                  <img className='wmx-w-7 wmx-h-7 wmx-rounded' src={product.image} alt={product.name} />
                   <span className='wmx-truncate'>{product.name}</span>
                 </li>
               ))}
