@@ -8,7 +8,7 @@
  * Requires at least: 5.2
  * Requires PHP:      7.4
  * Author:            Shop ManagerX
- * Author URI:        https://shopmanagerx.wordpress.com/
+ * Author URI:        https://osmanhaideradnan.wordpress.com/
  * License:           GPLv3 or later
  * License URI:       http://www.gnu.org/licenses/gpl-3.0.txt
  * Text Domain:       custom-product-badge-for-woocommerce
