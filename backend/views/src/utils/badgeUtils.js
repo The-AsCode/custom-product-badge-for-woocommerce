@@ -71,7 +71,7 @@ export const badgeCustomSettings = {
   text: 'New Arrival',
   position: 'top-right',
   color: '#ffffff',
-  background: 'linear-gradient(90deg, RGB(47, 232, 53) 0%, rgba(11,194,219,1) 100%);',
+  background: 'linear-gradient(90deg, RGB(47, 232, 53) 0%, rgba(11,194,219,1) 100%)',
   height: 34,
   width: 110,
   margin: 8,
