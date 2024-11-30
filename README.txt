@@ -11,7 +11,7 @@ License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Requires PHP: 7.4
 Donate link: https://shopmanagerx.wordpress.com/
 
-Enhance your WooCommerce store with our Custom Product Badge Manager plugin! Easily create and manage custom badges and image badges for your products. Highlight sales, promotions, and special events with personalized badge designs, improving visibility and driving conversions. 
+Boost your WooCommerce store with the Custom Product Badge Manager. Create and manage custom badges to highlight sales, promotions, and events.
 
 ==Description==
 Take your WooCommerce store to the next level with our Custom Product Badge Manager plugin. This powerful tool allows you to effortlessly create and manage custom product badges to highlight sales, promotions, or special events. Whether you're looking to design unique badges with adjustable styles or use pre-made image badges for occasions like Black Friday or seasonal sales, our plugin gives you complete control. With flexible badge placement options and the ability to apply badges to individual products or product categories, you can tailor the shopping experience to suit your store's needs. Boost visibility and attract more customers with eye-catching badges that set your products apart!

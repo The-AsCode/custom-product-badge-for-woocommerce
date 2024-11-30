@@ -5,7 +5,7 @@
   "scripts": {
     "start": "concurrently \"wp-scripts start\" \"npm run tailwind\"",
     "tailwind": "npx tailwindcss -i ./assets/src/styles/tailwind.css -o ./backend/views/assets/tailwind.css --watch",
-    "zip": "zip -r custom-product-badge-for-woocommerce.zip . -x \"node_modules/*\" -x \"*.zip\" -x \"*.git/*\" -x \"*.DS_Store\" -x \"*.gitignore\""
+    "zip": "zip -r custom-product-badge-for-woocommerce.zip . -x \"node_modules/*\" -x \"*.zip\" -x \"*.git/*\" -x \"*.DS_Store\" -x \"*.gitignore\" -x \"*badgeApiDocumentation.txt\" -x \"*settingsApiDocumentation.txt\""
   },
   "author": "",
   "license": "ISC",
