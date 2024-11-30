@@ -11,18 +11,16 @@ License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Requires PHP: 7.4
 Donate link: https://shopmanagerx.wordpress.com/
 
-Easily customize unlimited product badges with Store Manager for better custom product badge. 
+Enhance your WooCommerce store with our Custom Product Badge Manager plugin! Easily create and manage custom badges and image badges for your products. Highlight sales, promotions, and special events with personalized badge designs, improving visibility and driving conversions. 
 
 ==Description==
-**The ultimate store management plugin for efficiently managing WooCommerce stock while creating and customizing unlimited product badges for enhanced store optimization.**
-
-WooCommerce Store Manager is the all-in-one solution to streamline stock management and WooCommerce **badge customization** for your e-commerce store.
+Take your WooCommerce store to the next level with our Custom Product Badge Manager plugin. This powerful tool allows you to effortlessly create and manage custom product badges to highlight sales, promotions, or special events. Whether you're looking to design unique badges with adjustable styles or use pre-made image badges for occasions like Black Friday or seasonal sales, our plugin gives you complete control. With flexible badge placement options and the ability to apply badges to individual products or product categories, you can tailor the shopping experience to suit your store's needs. Boost visibility and attract more customers with eye-catching badges that set your products apart!
 
 This **Custom Product Badge for WooComemrce** helps you efficiently track inventory levels, automate stock updates, and ensure you never miss a low-stock alert.
 
 It also features a robust **WooCommerce badge management** system, allowing you to create, customize, and assign product badges like **"Sale," "New," "Seasonal Sale," and "Best Seller"** to increase visibility and conversions.
 
-If you want a seamless store management experience, **WooCommerce Store Manager** is the perfect choice!:
+If you want a seamless store management experience, **Custom Product Badge for WooComemrce** is the perfect choice!:
 
 
 ===✅ WooComemrce Product Badge Management===
@@ -60,9 +58,7 @@ These badges help draw attention to key product features, encouraging customers 
 * **Add product discount text**
 * **Choose between label shape or image badge**
 * **Display labels on single product pages**
-* **Upload custom badges**
-* **Conditional badge assignment based on product category and price**
-* **Conditional badge assignment for out-of-stock products**
+* **Gradient color badge**
 
 ===How to add sale badge in WooCommerce?===
 
