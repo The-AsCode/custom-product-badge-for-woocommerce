@@ -173,8 +173,6 @@ class FilterApi extends WP_REST_Controller {
 
 		$updated = ( new Filter )->update_filter( absint( $request['id'] ), $prepared );
 
-		error_log(print_r($updated, true));
-
 		if ( ! $updated ) {
 			return new \WP_Error(
 				'rest_not_updated',

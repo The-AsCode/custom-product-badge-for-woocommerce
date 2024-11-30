@@ -17,9 +17,6 @@ class BadgeHelper {
         
         $table_name = $wpdb->prefix . 'cpbw_badges';
         
-        // Directly construct the query without prepare since there are no variables to sanitize
-        // $query = "SELECT * FROM {$table_name}";
-        
         // Get the results as an associative array
         $results = $wpdb->get_results( $wpdb->prepare("SELECT * FROM {$table_name}"), ARRAY_A);
     
@@ -210,54 +207,19 @@ class BadgeHelper {
      * @param string $status     Status of the badge
      * @param string $badge_type Type of the badge
      */
-    public static function get_badges_for_apply( $status = null, $badge_type = null ) {
+    public static function get_badges_for_apply( $status = 1 ) {
         global $wpdb;
     
         $table_name = $wpdb->prefix . 'cpbw_badges';
     
-        // Start with the base query
-        $query = "SELECT * FROM $table_name WHERE 1=1";
+        // Prepare the query with the provided status
+        // $prepared_query = $wpdb->prepare( "SELECT * FROM $table_name WHERE status = $status ORDER BY priority DESC" );
     
-        $query_args = [];
+        // Execute the query and fetch results
+        $results = $wpdb->get_results( $wpdb->prepare( "SELECT * FROM $table_name WHERE status = $status ORDER BY priority DESC" ), ARRAY_A );
     
-        // Add condition for status if provided
-        if ( ! is_null( $status ) ) {
-            $query .= " AND status = %s";
-            $query_args[] = $status;
-        }
-    
-        // Add condition for badge type if provided
-        if ( ! is_null( $badge_type ) ) {
-            $query .= " AND badge_type = %s";
-            $query_args[] = $badge_type;
-        }
-    
-        // Add order by priority in descending order
-        $query .= " ORDER BY priority DESC";
-    
-        // Prepare the full query with dynamic arguments
-        if ( ! empty( $query_args ) ) {
-            $query = $wpdb->prepare( $query, ...$query_args );
-        }
-    
-        // Execute the query
-        $results = $wpdb->get_results( $query, ARRAY_A );
-    
-        if ( empty( $results ) ) {
-            return [];
-        }
-    
-        // Decode serialized fields
-        foreach ( $results as &$badge ) {
-            if ( ! empty( $badge['filter'] ) ) {
-                $badge['filter'] = maybe_unserialize( $badge['filter'] );
-            }
-            if ( ! empty( $badge['badge_style'] ) ) {
-                $badge['badge_style'] = maybe_unserialize( $badge['badge_style'] );
-            }
-        }
-    
-        return $results;
-    }
+        // Return the results or an empty array if no badges are found
+        return ! empty( $results ) ? $results : [];
+    }    
 
 }

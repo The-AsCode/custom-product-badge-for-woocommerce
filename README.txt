@@ -1,4 +1,4 @@
-=== Custom Product Badge Manager for WooComemrce ===
+=== Custom Product Badge for WooComemrce ===
 Contributors: shopmanagerx
 Tags: badge, label, product-label,custom-badge
 Requires at least: 4.9
