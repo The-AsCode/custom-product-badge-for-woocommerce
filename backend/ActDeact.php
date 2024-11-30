@@ -35,6 +35,7 @@ class ActDeact {
             badge_style text NOT NULL,
             priority tinyint(3) NOT NULL DEFAULT 1,
             status tinyint(3) NOT NULL DEFAULT 1,
+            badge_settings text DEFAULT NULL,
             created_by mediumint(9) NOT NULL,
             valid_from datetime DEFAULT null,
             valid_to datetime DEFAULT null,
@@ -65,6 +66,7 @@ class ActDeact {
             filter_name varchar(255) NOT NULL,
             filter_data text NOT NULL,
             created_by bigint(20) NOT NULL,
+            badge_settings text DEFAULT NULL,
             created_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
             updated_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
             PRIMARY KEY  (id)
@@ -74,6 +76,7 @@ class ActDeact {
         
         dbDelta( $sql );
     }
+
 
     /** 
      * Method to check if the plugin needs to be updated

@@ -12,7 +12,7 @@ const CustomSettings = () => {
       <BadgeDimension />
       <BadgeColors />
       <OtherProperty />
-      <BadgeShape />
+      {/* <BadgeShape /> */}
     </>
   );
 };

@@ -95,7 +95,7 @@ class Badge {
      */
     public static function is_product_passed( $product, $badge_config ){
 
-        $filter = $badge_config['filter'];
+        $filter = maybe_unserialize($badge_config['filter']);
 
         if( $filter == 'all' ) {
             return true;

@@ -72,7 +72,7 @@ const SelectBadgeType = () => {
           </button>
         ))}
 
-        <button
+        {/* <button
           disabled={Boolean(id)}
           onClick={() => handleBadgeType('custom_html')}
           className={cn(
@@ -83,7 +83,7 @@ const SelectBadgeType = () => {
           )}
         >
           Custom HTML
-        </button>
+        </button> */}
       </div>
     </SectionContainer>
   );

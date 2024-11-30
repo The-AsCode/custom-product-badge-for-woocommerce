@@ -17,6 +17,9 @@ class BadgeHelper {
         
         $table_name = $wpdb->prefix . 'cpbw_badges';
         
+        // Directly construct the query without prepare since there are no variables to sanitize
+        // $query = "SELECT * FROM {$table_name}";
+        
         // Get the results as an associative array
         $results = $wpdb->get_results( $wpdb->prepare("SELECT * FROM {$table_name}"), ARRAY_A);
     
@@ -212,14 +215,17 @@ class BadgeHelper {
     
         $table_name = $wpdb->prefix . 'cpbw_badges';
     
-        // Prepare the query with the provided status
-        // $prepared_query = $wpdb->prepare( "SELECT * FROM $table_name WHERE status = $status ORDER BY priority DESC" );
-    
         // Execute the query and fetch results
-        $results = $wpdb->get_results( $wpdb->prepare( "SELECT * FROM $table_name WHERE status = $status ORDER BY priority DESC" ), ARRAY_A );
+        $results = $wpdb->get_results(
+            $wpdb->prepare(
+                "SELECT * FROM $table_name WHERE status = %d ORDER BY priority DESC",
+                $status
+            ),
+            ARRAY_A
+        );
     
         // Return the results or an empty array if no badges are found
         return ! empty( $results ) ? $results : [];
     }    
-
+    
 }
