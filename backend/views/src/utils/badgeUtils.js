@@ -41,7 +41,11 @@ const getClipPath = (key = 0) => {
 };
 
 export const generateBadgeHtml = (badge_settings) => {
-  return `<div style='
+  return `<div>
+    <div class="cpbw-badge-container">${badge_settings.text}</div>
+
+  <style>
+  .cpbw-badge-container {
       margin:${badge_settings.margin}px;
       color: ${badge_settings.color};
       background: ${badge_settings.background};
@@ -57,13 +61,13 @@ export const generateBadgeHtml = (badge_settings) => {
       ${getPositionStyles(badge_settings.position)}
       ${getClipPath(badge_settings.clipKey)}
       position: absolute;
-      text-align: center;
       z-index: 999;
-    '><span style='vertical-align: middle; line-height: ${
-      badge_settings.height - 2 * badge_settings.borderWidth
-    }px; display: inline-block;'>
-    ${badge_settings.text}
-  </span></div>`;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  </style>
+  </div>`;
 };
 
 export const badgeCustomSettings = {
@@ -132,7 +136,7 @@ export const htmlBadgeSettings = {
   filterType: 'all',
   position: 'top-right',
   margin: 10,
-  htmlContent: '<div class="main">\n  Winter Sale\n</div>\n',
+  htmlContent: '<div class="cpbw-badge-container">\n  Winter Sale\n</div>\n',
   cssContent:
-    '.main {\n  color: white; \n  background: linear-gradient(to right, #0A3981, #1F509A);\n  border: 2px solid #3e7fe0;\n  padding: 4px 16px;\n  border-radius: 20px;\n  font-size: 14px;\n  cursor: pointer;\n}\n\n  .main:hover {\n    background: linear-gradient(to right, #1F509A, #0A3981);\n  }',
+    '.cpbw-badge-container {\n  color: white; \n  background: linear-gradient(to right, #0A3981, #1F509A);\n  border: 2px solid #3e7fe0;\n  padding: 4px 16px;\n  border-radius: 20px;\n  font-size: 14px;\n  cursor: pointer;\n}\n\n  .main:hover {\n    background: linear-gradient(to right, #1F509A, #0A3981);\n  }',
 };
