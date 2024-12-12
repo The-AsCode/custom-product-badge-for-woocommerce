@@ -25,7 +25,7 @@ const SideNav = () => {
               {__('WooCommerce', 'custom-product-badge-for-woocommerce')}
             </span>
             <span className='wmx-text-xl wmx-font-bold wmx-text-gray-700'>
-              {__('Store Manager', 'custom-product-badge-for-woocommerce')}
+              {__('Badge Manager', 'custom-product-badge-for-woocommerce')}
             </span>
           </h3>
         </div>
