@@ -57,7 +57,6 @@ class DropDownApi extends WP_REST_Controller {
 	 * @return \WP_REST_Response|\WP_Error
 	 */
 	public function get_items( $request ) {
-		error_log(print_r($request['search'],true));
 		$search = '';
 
 		if ( is_string( $request['search'] ) ) {

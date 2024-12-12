@@ -169,7 +169,7 @@ class Filter {
     public function delete( $id ) {
         global $wpdb;
 
-        $table_name = $wpdb->prefix . 'store_manager_filters';
+        $table_name = $wpdb->prefix . 'cpbw_badges_filters';
 
 		return $wpdb->delete( $table_name, array( 'id' => $id ), array( '%d' ) );//phpcs:ignore
     }
@@ -185,7 +185,7 @@ class Filter {
     public function update( $config, $id ) {
         global $wpdb;
 
-        $table_name = $wpdb->prefix . 'store_manager_filters';
+        $table_name = $wpdb->prefix . 'cpbw_badges_filters';
 
 		return $wpdb->update(  //phpcs:ignore
             $table_name,
@@ -219,7 +219,7 @@ class Filter {
         global $wpdb;
 
 		$insert = $wpdb->insert( // phpcs:ignore
-            "{$wpdb->prefix}store_manager_filters",
+            "{$wpdb->prefix}cpbw_badges_filters",
             array(
                 'filter_name'   => $config['name'],
                 'filter_data'   => wp_json_encode($config),
@@ -253,7 +253,7 @@ class Filter {
     public function get_rows() {
         global $wpdb;
         // Get all rows
-		$get_filters = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}store_manager_filters", OBJECT ); //phpcs:ignore
+		$get_filters = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}cpbw_badges_filters", OBJECT ); //phpcs:ignore
         $filters     = array();
 
         foreach ( $get_filters as $result ) {
@@ -273,6 +273,6 @@ class Filter {
     public function get_row( $id ) {
         global $wpdb;
         // Prepare and execute the query in one step.
-        return $wpdb->get_row( $wpdb->prepare( "SELECT * FROM {$wpdb->prefix}store_manager_filters WHERE id = %d", $id ), OBJECT );
+        return $wpdb->get_row( $wpdb->prepare( "SELECT * FROM {$wpdb->prefix}cpbw_badges_filters WHERE id = %d", $id ), OBJECT );
     }    
 }

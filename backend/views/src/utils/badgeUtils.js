@@ -41,7 +41,11 @@ const getClipPath = (key = 0) => {
 };
 
 export const generateBadgeHtml = (badge_settings) => {
-  return `<div style='
+  return `<div>
+    <div class="cpbw-badge-container">${badge_settings.text}</div>
+
+  <style>
+  .cpbw-badge-container {
       margin:${badge_settings.margin}px;
       color: ${badge_settings.color};
       background: ${badge_settings.background};
@@ -57,32 +61,32 @@ export const generateBadgeHtml = (badge_settings) => {
       ${getPositionStyles(badge_settings.position)}
       ${getClipPath(badge_settings.clipKey)}
       position: absolute;
-      text-align: center;
       z-index: 999;
-    '><span style='vertical-align: middle; line-height: ${
-      badge_settings.height - 2 * badge_settings.borderWidth
-    }px; display: inline-block;'>
-    ${badge_settings.text}
-  </span></div>`;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  </style>
+  </div>`;
 };
 
 export const badgeCustomSettings = {
   filterType: 'all',
-  text: 'Badge Text',
+  text: 'New Arrival',
   position: 'top-right',
   color: '#ffffff',
-  background: '#000000',
-  height: 36,
-  width: 100,
-  margin: 10,
-  borderTopLeftRadius: 0,
-  borderTopRightRadius: 0,
-  borderBottomLeftRadius: 0,
-  borderBottomRightRadius: 0,
+  background: 'linear-gradient(90deg, RGB(47, 232, 53) 0%, rgba(11,194,219,1) 100%)',
+  height: 34,
+  width: 110,
+  margin: 8,
+  borderTopLeftRadius: 20,
+  borderTopRightRadius: 20,
+  borderBottomLeftRadius: 20,
+  borderBottomRightRadius: 20,
   fontSize: 14,
-  fontWeight: 400,
-  borderWidth: 1,
-  borderColor: '#007CF5',
+  fontWeight: 700,
+  borderWidth: 2,
+  borderColor: 'rgb(49, 174, 188)',
   clipKey: 0,
 };
 
@@ -132,7 +136,7 @@ export const htmlBadgeSettings = {
   filterType: 'all',
   position: 'top-right',
   margin: 10,
-  htmlContent: '<div class="main">\n  Your Content\n</div>\n',
+  htmlContent: '<div class="cpbw-badge-container">\n  Winter Sale\n</div>\n',
   cssContent:
-    '.main {\n  color: white; \n  background: #88c273;\n  border: 2px solid #FFA24C;\n  padding: 4px 12px;\n  border-radius: 8px;\n  animation: all ease 0.5s;\n  cursor: pointer;\n}\n\n  .main:hover {\n    background: #88C200;\n  }',
+    '.cpbw-badge-container {\n  color: white; \n  background: linear-gradient(to right, #0A3981, #1F509A);\n  border: 2px solid #3e7fe0;\n  padding: 4px 16px;\n  border-radius: 20px;\n  font-size: 14px;\n  cursor: pointer;\n}\n\n  .main:hover {\n    background: linear-gradient(to right, #1F509A, #0A3981);\n  }',
 };

@@ -25,12 +25,12 @@ class Badge {
             foreach ( $active_badges as $badge_config ) {
                 // Check if the product passes the badge's filter conditions
                 if ( ! self::is_product_passed( $product, $badge_config ) ) {
-                    continue; // Skip to the next badge if the product doesn't pass the filter
+                    continue;
                 }
     
                 // Check if the badge is valid for the current date
                 if ( ! self::is_in_valid_date( $badge_config ) ) {
-                    continue; // Skip to the next badge if the date is not valid
+                    continue;
                 }
     
                 // Apply the badge style and stop further processing (only one badge applied)
@@ -95,7 +95,7 @@ class Badge {
      */
     public static function is_product_passed( $product, $badge_config ){
 
-        $filter = $badge_config['filter'];
+        $filter = maybe_unserialize($badge_config['filter']);
 
         if( $filter == 'all' ) {
             return true;

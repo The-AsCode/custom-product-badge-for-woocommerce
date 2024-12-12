@@ -621,6 +621,10 @@ video {
   z-index: 10;
 }
 
+.wmx-z-40{
+  z-index: 40;
+}
+
 .wmx-z-50{
   z-index: 50;
 }

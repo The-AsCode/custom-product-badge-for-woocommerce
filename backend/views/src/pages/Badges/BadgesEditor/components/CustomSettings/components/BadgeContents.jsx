@@ -58,7 +58,7 @@ const BadgeContents = () => {
         </div>
       </div>
 
-      {!CPBW.isPro && <PlaceHolderTip className='wmx-max-w-4xl' />}
+      {/* {!CPBW.isPro && <PlaceHolderTip className='wmx-max-w-4xl' />} */}
     </SectionContainer>
   );
 };

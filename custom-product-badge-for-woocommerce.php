@@ -1,14 +1,14 @@
 <?php
 
 /** 
- * Plugin Name:       Custom Product Badge For WooCommerce
+ * Plugin Name:       Custom Product Badge for WooComemrce
  * Plugin URI:        https://shopmanagerx.wordpress.com/
  * Description:       The Ultimate WooCommerce Plugin for Custom Badge Control.
- * Version:           1.1.4
+ * Version:           1.0.0
  * Requires at least: 5.2
  * Requires PHP:      7.4
  * Author:            Shop ManagerX
- * Author URI:        https://shopmanagerx.wordpress.com/
+ * Author URI:        https://osmanhaideradnan.wordpress.com/
  * License:           GPLv3 or later
  * License URI:       http://www.gnu.org/licenses/gpl-3.0.txt
  * Text Domain:       custom-product-badge-for-woocommerce
@@ -64,10 +64,9 @@ final class CPBW_Main {
      *
      * @return store_manager
      */
-    public static function init()
-    {
+    public static function init() {
         static $instance = false;
-
+        
         if (!$instance) {
             $instance = new self();
         }
@@ -94,8 +93,7 @@ final class CPBW_Main {
      *
      * @return void
      */
-    function activate()
-    {
+    function activate() {
         update_option('store_manager_version', CPBW_VERSION);
         // Set an option to store the installation time.
         $installed = get_option('shop_manager_install_time');
@@ -131,8 +129,8 @@ final class CPBW_Main {
      * @return void
      */
     public function init_plugin() {
-        $badge_base_dir = ABSPATH . 'wp-content/plugins/custom-product-badge-for-woocommerce/backend/views/assets/badge/badge-images';
-        $badge_json_file = ABSPATH . 'wp-content/plugins/custom-product-badge-for-woocommerce/backend/views/assets/badge/badgeImageData.json';
+        // $badge_base_dir = ABSPATH . 'wp-content/plugins/custom-product-badge-for-woocommerce/backend/views/assets/badge/badge-images';
+        // $badge_json_file = ABSPATH . 'wp-content/plugins/custom-product-badge-for-woocommerce/backend/views/assets/badge/badgeImageData.json';
         if (is_admin()) {
             new CPBW\Backend\Menu();
             // new CPBW\App\Image\Image( $badge_base_dir, $badge_json_file);
