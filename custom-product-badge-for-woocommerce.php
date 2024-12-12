@@ -129,8 +129,8 @@ final class CPBW_Main {
      * @return void
      */
     public function init_plugin() {
-        $badge_base_dir = ABSPATH . 'wp-content/plugins/custom-product-badge-for-woocommerce/backend/views/assets/badge/badge-images';
-        $badge_json_file = ABSPATH . 'wp-content/plugins/custom-product-badge-for-woocommerce/backend/views/assets/badge/badgeImageData.json';
+        // $badge_base_dir = ABSPATH . 'wp-content/plugins/custom-product-badge-for-woocommerce/backend/views/assets/badge/badge-images';
+        // $badge_json_file = ABSPATH . 'wp-content/plugins/custom-product-badge-for-woocommerce/backend/views/assets/badge/badgeImageData.json';
         if (is_admin()) {
             new CPBW\Backend\Menu();
             // new CPBW\App\Image\Image( $badge_base_dir, $badge_json_file);
