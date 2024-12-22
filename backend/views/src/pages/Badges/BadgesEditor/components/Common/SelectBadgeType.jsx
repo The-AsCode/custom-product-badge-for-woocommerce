@@ -17,6 +17,7 @@ import SectionContainer from './SectionContainer';
 const badgeType = {
   custom: 'Custom',
   image: 'Image/Icon',
+  'custom_html': 'Custom HTML',
 };
 
 const SelectBadgeType = () => {

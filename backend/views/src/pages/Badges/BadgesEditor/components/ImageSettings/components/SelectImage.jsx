@@ -39,7 +39,7 @@ const SelectImage = () => {
             ))}
           </div>
 
-          {/* <UploadBadge /> */}
+          <UploadBadge />
         </div>
         <div className='wmx-p-4 wmx-flex wmx-text-center wmx-flex-wrap  wmx-justify-center wmx-gap-3'>
           {badge_settings.selectedBadgeGroup &&

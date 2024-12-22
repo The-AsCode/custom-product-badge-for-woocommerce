@@ -3,6 +3,7 @@ import BadgeColors from './components/BadgeColors/BadgeColors';
 import BadgeContents from './components/BadgeContents';
 import BadgeDimension from './components/BadgeDimension';
 import OtherProperty from './components/OtherProperty';
+import BadgeShape from './components/BadgeShape';
 
 const CustomSettings = () => {
   return (
@@ -11,7 +12,7 @@ const CustomSettings = () => {
       <BadgeDimension />
       <BadgeColors />
       <OtherProperty />
-      {/* <BadgeShape /> */}
+      <BadgeShape />
     </>
   );
 };
